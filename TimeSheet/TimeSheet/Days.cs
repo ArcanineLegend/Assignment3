@@ -34,27 +34,43 @@ namespace Days
 
         public void Set(type TypeChoice, float hours)//change to set so its changaable.
         {
-            if (HoursTest() <= (float)24)
+            if ((hours % .25) == 0) //simple check for the .25 increment requirment.
             {
 
 
-                TotalHours += hours;
-                if (TypeChoice == type.REGULAR)
+                if (HoursTest() <= (float)24)
                 {
-                    RegHours = hours;
-                    HoursArray[0] = RegHours;
-                }
-                else if (TypeChoice == type.SICK)
-                {
-                    SickHours = hours;
-                    HoursArray[1] = SickHours;
-                }
-                else if (TypeChoice == type.VACATION)
-                {
-                    VacHours = hours;
-                    HoursArray[2] = VacHours;
+
+
+                    TotalHours += hours;
+                    if (TypeChoice == type.REGULAR)
+                    {
+                        RegHours = hours;
+                        HoursArray[0] = RegHours;
+                    }
+                    else if (TypeChoice == type.SICK)
+                    {
+                        SickHours = hours;
+                        HoursArray[1] = SickHours;
+                    }
+                    else if (TypeChoice == type.VACATION)
+                    {
+                        VacHours = hours;
+                        HoursArray[2] = VacHours;
+                    }
                 }
             }
+        }
+       /* public void Commit()
+        {
+            List<Day> DaysArray = new List<Day>();
+            DaysArray.add(Day);
+
+        }
+       */
+       //moved to the TimeCardTests since thats the logical place to put it.
+        public void Remove(type TypeChoice, float hours)//unnessasary if we just have one Set method that does all the requirments at once.
+        {
         }
         public bool Validate()
         {

@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 namespace TimeSheetTests
-{
-    public static class Assert
-    
+{ 
     [TestClass]
     public class DayTests
     {

@@ -13,6 +13,10 @@ namespace UnitTesting
         {
 
         }
+        CollectDayData()
+        {
+
+        }
     }
     public void TestOverTime()
     {
@@ -26,5 +30,9 @@ namespace UnitTesting
         //assert
         Assert.AreEqual(expected,t.CalculateOverTime());
 
+    }
+    public void CollectDayData(){
+        List<Day> DaysArray = new List<Day>();
+        DaysArray.add(Day1);//changed according to next day name. Most likely named by the day of the week.
     }
 }
