@@ -3,7 +3,7 @@
 namespace Days
 {
 
-    public class Days
+    public class Day
     {
         public float TotalHours = 0;
         public float RegHours = 0;
@@ -17,7 +17,7 @@ namespace Days
         public type value = type.REGULAR;
         public DateTime dateTime;
 
-        public Days(DateTime dateTime)
+        public Day(DateTime dateTime)
         {
             this.dateTime = dateTime;
         }
@@ -32,7 +32,7 @@ namespace Days
         }
         float[] HoursArray;
 
-        public void Add(type TypeChoice, float hours)//change to set so its changaable.
+        public void Set(type TypeChoice, float hours)//change to set so its changaable.
         {
             if (HoursTest() <= (float)24)
             {
@@ -41,17 +41,17 @@ namespace Days
                 TotalHours += hours;
                 if (TypeChoice == type.REGULAR)
                 {
-                    RegHours += hours;
+                    RegHours = hours;
                     HoursArray[0] = RegHours;
                 }
                 else if (TypeChoice == type.SICK)
                 {
-                    SickHours += hours;
+                    SickHours = hours;
                     HoursArray[1] = SickHours;
                 }
                 else if (TypeChoice == type.VACATION)
                 {
-                    VacHours += hours;
+                    VacHours = hours;
                     HoursArray[2] = VacHours;
                 }
             }

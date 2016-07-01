@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace UnitTesting
 {
-    public static class Assert;
     class TimeCardTests
     {
-        [TestMethod()]
+        [TestMethod]
         TestOverTime()
         {
 
@@ -20,9 +19,9 @@ namespace UnitTesting
         TimeCardTests t = new TimeCardTests();
         float expected = 44;
         //act
-        foreach(Days d in Enum.GetValues(typeof(DayOfWeek)))
+        foreach(Days.Day d in Enum.GetValues(typeof(DayOfWeek)))
         {
-            d.Add(Days.type.REGULAR, 12);
+            d.Add(Days.Day.type.REGULAR, 12);
         }
         //assert
         Assert.AreEqual(expected,t.CalculateOverTime());

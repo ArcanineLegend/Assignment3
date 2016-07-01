@@ -6,3 +6,6 @@ C:\Visual Studio SandBox\.git\TimeSheet\TimeSheet\bin\Debug\TimeSheet.exe
 C:\Visual Studio SandBox\.git\TimeSheet\TimeSheet\bin\Debug\TimeSheet.pdb
 C:\Visual Studio SandBox\.git\TimeSheet\TimeSheet\obj\Debug\TimeSheet.exe
 C:\Visual Studio SandBox\.git\TimeSheet\TimeSheet\obj\Debug\TimeSheet.pdb
+C:\Users\enegrete\Desktop\Assignment 3 Application dev\TimeSheet\TimeSheet\bin\Debug\TimeSheet.exe.config
+C:\Users\enegrete\Desktop\Assignment 3 Application dev\TimeSheet\TimeSheet\obj\Debug\TimeSheet.exe
+C:\Users\enegrete\Desktop\Assignment 3 Application dev\TimeSheet\TimeSheet\obj\Debug\TimeSheet.pdb

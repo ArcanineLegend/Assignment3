@@ -1,7 +1,12 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 namespace TimeSheetTests
 {
+    public static class Assert
+    
     [TestClass]
     public class DayTests
     {
@@ -23,10 +28,10 @@ namespace TimeSheetTests
              */
 
             //arrange
-            Days d = new Days(new DateTime(2016, 5, 28));
+            Days.Day d = new Days.Day(new DateTime(2016, 5, 28));
 
             //act
-            d.Add(Days.type.REGULAR, 8);
+            d.Add(Days.Day.type.REGULAR, 8);
 
             //assert
             Assert.IsTrue(d.Validate());
@@ -35,10 +40,10 @@ namespace TimeSheetTests
         public void TestDaySick()
         {
             //arrange
-            Days d = new Days(new DateTime(2016, 5, 28));
+            Days.Day d = new Days.Day(new DateTime(2016, 5, 28));
 
             //act
-            d.Add(Days.type.SICK, 24);
+            d.Add(Days.Day.type.SICK, 24);
 
             //assert
             Assert.IsTrue(d.Validate());
@@ -47,11 +52,11 @@ namespace TimeSheetTests
         public void TestDayOver25()
         {
             //arrange
-            Days d = new Days(new DateTime(2016, 6, 28));
+            Days.Day d = new Days.Day(new DateTime(2016, 6, 28));
 
             //act
-            d.Add(Days.type.REGULAR, 21);
-            d.Add(Days.type.SICK, 5);
+            d.Add(Days.Day.type.REGULAR, 21);
+            d.Add(Days.Day.type.SICK, 5);
 
             //assert
             Assert.IsFalse(d.Validate());
@@ -60,12 +65,12 @@ namespace TimeSheetTests
         public void TestBelow0()
         {
             //arrange
-            Days d = new Days(new DateTime(2016, 6, 28));
+            Days.Day d = new Days.Day(new DateTime(2016, 6, 28));
 
             //act
             try
             {
-                d.Add(Days.type.REGULAR, -1);
+                d.Add(Days.Day.type.REGULAR, -1);
             }
             catch (ArgumentOutOfRangeException e)
             {
@@ -81,10 +86,10 @@ namespace TimeSheetTests
         public void Test0()
         {
             //arrange
-            Days d = new Days(new DateTime(2016, 6, 28));
+            Days.Day d = new Days.Day(new DateTime(2016, 6, 28));
 
             //act
-            d.Add(Days.type.REGULAR, 0);
+            d.Add(Days.Day.type.REGULAR, 0);
 
             //assert
             Assert.IsTrue(d.Validate());
