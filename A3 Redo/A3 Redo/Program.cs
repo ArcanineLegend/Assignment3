@@ -10,6 +10,12 @@ namespace A3_Redo
     {
         static void Main(string[] args)
         {
+            Run();
+        }
+
+        public static void Run()
+        {
+
         }
     }
 }
