@@ -8,10 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Timesheet
+namespace A3_Redo
 {
     public class Day
     {
+        public float regularHours = 0;
+        public float sickHours = 0;
+        public float vacationHours = 0;
+        public float totalHours = 0;
         public enum TimeCodes { REGULAR, SICK, VACATION }
 
         private DateTime dateTime;
